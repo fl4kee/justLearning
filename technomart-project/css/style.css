@@ -1,0 +1,433 @@
+/*************************fonts declaration*************************/
+@font-face{
+  font-family: 'Cuprum';
+  src: url(../fonts/web/cuprum.woff),
+       url(../fonts/web/cuprum.woff2);
+}
+@font-face{
+  font-family: 'Cuprum';
+  src: url(../fonts/web/cuprumbold.woff),
+       url(../fonts/web/cuprumbold.woff2);
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face{
+  font-family: 'Cuprum';
+  src: url(../fonts/web/cuprumbolditalic.woff),
+       url(../fonts/web/cuprumbolditalic.woff2);
+  font-weight: bold;
+  font-style: italic;
+}
+@font-face{
+  font-family: 'Cuprum';
+  src: url(../fonts/web/cuprumitalic.woff),
+       url(../fonts/web/cuprumitalic.woff2);
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face{
+  font-family: 'ptsans';
+  src: url(../fonts/web/ptsans.woff),
+       url(../fonts/web/ptsans.woff2);
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face{
+  font-family: 'ptsans';
+  src: url(../fonts/web/ptsansbold.woff),
+       url(../fonts/web/ptsansbold.woff2);
+  font-weight: bold;
+  font-style: normal;
+}
+/*border-box properties*/
+
+*, *::before, *::after{
+  box-sizing: inherit;
+}
+html{
+  box-sizing: border-box;
+}
+.content-box-component{
+  box-sizing: content-box;
+}
+/*essentials*/
+body{
+  font-family: 'Cuprum', Arial, sans-serif;
+  }
+.container{
+  width: 960px;
+  margin: auto;
+}
+a{
+  text-decoration: none;
+  color: #000;
+}
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+/*************************header************************/
+.header-top a,
+.main-nav a{
+  color: #fff;
+}
+.header-top-color,
+.header-top li,
+.main-nav,
+.main-nav li{
+  background-color: #293449;
+  font-size: 17px;
+  line-height: 18px;
+  list-style: none;
+}
+
+.header-top{
+  display: flex;
+}
+.logo-header{
+  text-transform: uppercase;
+  font-size: 25px;
+  background-color: #ee3643;
+  padding: 10px 50px;
+  border-bottom: 5px  solid rgba(0,0,0,0.4);
+  box-sizing: border-box;
+
+}
+.search-field-header input{
+  background-color: #293449;
+  border: none;
+}
+.search-field-header label{
+  color: #fff;
+}
+.favorites-button{
+  width: 160px;
+  height: 40px;
+}
+.cart-button{
+  width: 160px;
+  height: 40px;
+}
+.order-button{
+  width: 160px;
+  height: 40px;
+}
+.site-description{
+  font-size:  16px;
+  line-height: 23px;
+  text-transform: none;
+  color: #ee3643;
+  font-style: italic;
+}
+
+.phone-number{
+  font-size: 21px;
+  line-height: 21px;
+  color:#ee3643;
+}
+.user-navigation li{
+  list-style: none;
+}
+.user-navigation,{
+  color: #000;
+}
+.user-navigation-authorized{
+  display: none;
+}
+
+.main-nav-current{
+  color: white;
+}
+.login-link,
+.registration-link{
+  font-size: 21px;
+  line-height: 21px;
+}
+.contacts-header{
+  font-size: 14px;
+  line-height: 24px;
+}
+.breadcrumbs{
+  list-style: none;
+}
+.breadcrumbs{
+  font-family: 'ptsans', Arial, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  color: #000;
+  text-transform: uppercase;
+}
+/*************************main*************************/
+.popular-items-header h2,
+.popular-manufacturers-header h2,
+.services-main h2,
+.services-main h3,
+.about-company h3,
+.contacts-about h3,
+.page-name,
+.items-filter-main h2,
+.about-perforators h2{
+  font-weight: normal;
+}
+.shop-section h3{
+  font-size: 24px;
+  line-height: 30px;
+  color: #fff;
+  font-weight: bold;
+  font-style: normal;
+}
+.shop-section a{
+  font-size: 14px;
+  line-height: 18px;
+  color: #fff;
+  text-transform: uppercase;
+}
+.items-filter-main li{
+  list-style: none;
+}
+.items-filter-main h2,
+.sorting{
+  background-color: #f7f3ec;
+}
+.items-filter-main h2,
+.sorting p,
+.sorting a{
+  font-family: 'ptsans', Arial, sans-serif;
+  font-size:13px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+.sorting a{
+  color: #999;
+}
+
+.filter{
+  font-family: 'ptsans', Arial, sans-serif;
+  font-size: 15px;
+  line-height: 20px;
+  color: #000;
+  text-transform: uppercase;
+}
+.filter h3{
+  font-family: 'ptsans', Arial, sans-serif;
+  font-size: 17px;
+  line-height: 30px;
+  color: #000;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-style: normal;
+}
+.materials,
+.delivery{
+  background-color: #ffbf47;
+}
+.instruments{
+  background-color: #3bbce3;
+}
+.tech{
+  background-color: #dc91d8;
+}
+.discount{
+  background-color: #8ed78f;
+}
+.popular-items-header,
+.popular-manufacturers-header{
+  background-color: #f9f5f0;
+}
+.popular-items-header h2,
+.popular-manufacturers-header h2,
+.page-name
+{
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: #32425c;
+}
+.services-desc h2,
+.about-company h3,
+.contacts-about h3,
+.about-perforators h2{
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: #32425c;
+}
+
+.services-main h3{
+  font-size: 36px;
+  line-height: 36px;
+  text-transform: uppercase;
+  color: #32425c;
+}
+.nav-services a{
+  font-size: 21px;
+  line-height: 30px;
+  color: #32425c;
+  font-weight: bold;
+  font-style: normal;
+}
+
+.services-main p,
+.about p,
+.contacts-about p,
+.about-perforators p{
+  font-family: 'ptsans', Arial, sans-serif;
+  font-size: 13px;
+  line-height: 24px;
+  color: #000;
+}
+.about-company li{
+  font-size: 18px;
+  line-height: 20px;
+  color: #000;
+  list-style: none;
+  font-weight: bold;
+  font-style: normal;
+}
+.catalog-item{
+  margin-bottom: 25px;
+  display: inline-block;
+}
+.catalog-item h3{
+  font-family: 'ptsans', Arial, sans-serif;
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: bold;
+  font-style: normal;
+}
+.price-before{
+  font-family: 'ptsans', Arial, sans-serif;
+  font-size: 17px;
+  line-height: 18px;
+  color: #999999;
+  text-decoration: line-through;
+  font-weight: bold;
+  font-style: normal;
+}
+.price-current{
+  font-family: 'ptsans', Arial, sans-serif;
+  font-size: 17px;
+  line-height: 18px;
+  background-color: #ee3643;
+  color: #fff;
+  display: inline;
+  padding: 7px 35px;
+  font-weight: bold;
+  font-style: normal;
+}
+
+.button{
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+.services-main{
+  background-color: #f4f8f9;
+  color: #32425c;
+}
+.page-name,
+.about-perforators{
+  background-color: #f2f6f8;
+}
+.drills{
+  background-color: #000;
+}
+.drills h3{
+  font-size: 36px;
+  line-height: 36px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-style: normal;
+}
+.drills p{
+  font-size: 18px;
+  line-height: 24px;
+  color: #fff;
+}
+.drills a{
+  color: #fff;
+}
+.pagination li{
+  list-style: none;
+}
+.pagination a{
+  font-family: 'ptsans', Arial, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  color: #000;
+}
+
+/*************************footer*************************/
+
+.main-footer-bottom-color{
+  background-color: #293449;
+}
+.main-footer-bottom,
+.main-footer-bottom a{
+  color: #fff;
+}
+.main-footer-top-color{
+  background-color: #32425c;
+}
+.main-footer-top,
+.main-footer-top a{
+  color: #fff;
+}
+
+.header-address{
+  color: #32425c;
+  font-style: normal;
+  font-weight: bold;
+}
+.footer-nav-first{
+  list-style: none;
+}
+.footer-address,
+footer .phone-number,
+.footer-nav-first a{
+  font-size: 18px;
+  line-height: 24px;
+  color: #fff;
+  font-style: normal;
+}
+.footer-nav-second li{
+  list-style: none;
+  }
+.footer-nav-second a{
+  font-size: 18px;
+  line-height: 24px;
+  color: #ffd180;
+}
+.social li{
+  list-style: none;
+}
+.footer-copyright{
+  font-size: 16px;
+  line-height: 18px;
+  color: #fff;
+}
+.footer-feedback p,
+.footer-developing p{
+  font-size: 16px;
+  line-height: 18px;
+  color: #fff;
+}
+.footer-feedback a.button,
+.footer-developing a.button{
+  font-size: 16px;
+  line-height: 18px;
+  color: #ffd180;
+  text-transform: none;
+}
+/*************************Modals******************************/
+.modal-letter-form{
+  display: none;
+}
+.item-added-modal{
+  display: none;
+}
