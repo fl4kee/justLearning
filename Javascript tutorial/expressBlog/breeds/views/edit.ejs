@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Редактировать информацию</h1>
+    <form method="POST" action="/breeds/<%= breed.id %>?_method=PATCH">
+        <section>      
+            <label for="breed">Название породы</label>
+            <input type="text" name="breed" id="breed" value="<%= breed.breed %>">
+        </section>
+        <br>
+        <section>
+            <label for="height">Рост</label>
+            <input type="text" name="height" id="height" value="<%= breed.height %>">
+        </section>
+        <br>
+        <section>
+            <label for="age">Продолжительность жизни</label>
+            <input type="text" name="age" id="age" value="<%= breed.age %>">
+        </section>
+        <br>
+        <section>
+            <label for="wool">Шерсть</label>
+            <input type="text" name="wool" id="wool" value="<%= breed.wool %>">
+        </section>
+        <br>
+        <section>
+            <label for="color">Окрас</label>
+            <input type="text" name="color" id="color" value="<%= breed.color %>">
+        </section>
+        <br>
+        <button type="submit">Редактировать</button>
+        <br>
+        <br>
+    </form>
+</body>
+</html>

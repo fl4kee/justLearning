@@ -1,0 +1,19 @@
+{
+  "name": "data_table-with-refresh",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chance": "^1.1.7",
+    "express": "^4.17.1",
+    "shuffle": "^0.2.5",
+    "shuffle-array": "^1.0.1"
+  }
+}

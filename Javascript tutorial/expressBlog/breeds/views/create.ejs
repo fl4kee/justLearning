@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+    <h1>Add new breed</h1>
+    <form action="/breeds" method="POST">
+    <section>      
+        <label for="breed">Название породы</label>
+        <input type="text" name="breed" id="breed">
+    </section>
+    <br>
+        <label for="weight">Вес</label>
+        <input type="number" name="weight" id="weight">
+    <section>
+        <br>
+        <label for="age">Продолжительность жизни</label>
+        <input type="number" name="age" id="age">
+    </section>
+    <br>
+    <section>
+        <label for="height">Рост</label>
+        <input type="number" name="height" id="height">
+    </section>
+    <br>
+    <section>
+        <label for="color">Окрас</label>
+        <input type="text" name="color" id="color">
+    </section>
+    <br>
+    <section>
+        <label for="wool">Шерсть</label>
+        <input type="text" name="wool" id="wool">
+    </section>
+    <br>
+    <button type="submit">Добавить</button>
+    <br>
+    <br>
+    </form>
+    <a href="/breeds">Назад к породам</a>
+</body>
+</html>
