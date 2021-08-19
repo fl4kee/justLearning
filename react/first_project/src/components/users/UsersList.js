@@ -15,7 +15,7 @@ const UsersList = (props) => {
                 {props.data.map(user => (
                     <UserItem username={user.username}
                               age={user.age}
-                              key={Math.random()}/>
+                              key={user.id}/>
                 ))}
             </UsersListStyled>
         </Card>

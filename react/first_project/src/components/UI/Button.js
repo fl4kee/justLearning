@@ -12,9 +12,9 @@ const StyledButton = styled.button`
 
 `
 
-const Button = () => {
+const Button = (props) => {
     return(
-        <StyledButton> Add User </StyledButton>
+        <StyledButton {...props}>{props.children}</StyledButton>
     )
 }
 

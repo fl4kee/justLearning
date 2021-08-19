@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const CardWrapper = styled.div`
+export const CardWrapper = styled.div`
     width: 45%;
     background-color: #FFF;
     border-radius: 10px;
@@ -17,3 +17,4 @@ const Card = (props) => {
 }
 
 export default Card
+

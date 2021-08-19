@@ -2,7 +2,8 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import Card from '../UI/Card'
 import Button from '../UI/Button'
-import Modal from '../Modal'
+import ErrorModal from '../UI/ErrorModal'
+
 const NewUserFormStyled = styled.form`
     & > div{
         display: flex;
@@ -26,7 +27,11 @@ const NewUserFormStyled = styled.form`
 const NewUserForm = (props) => {
     const [newUsername, SetNewUsername] = useState('')
     const [newAge, SetNewAge] = useState('')
+    const[error, setError] = useState()
 
+    const closeModal = () => {
+        setError()
+    }
     const onChangeUsernameHandler = (event) => {
         SetNewUsername(event.target.value)
     }
@@ -36,17 +41,21 @@ const NewUserForm = (props) => {
     const onSubmitHandler = (e) => {
         e.preventDefault()
 
-        if(newUsername.trim().length === 0 || newAge.trim().length === 0){
-            const error = 'Username and age are required'
-            console.log(error)
-            return Modal
+        if (newUsername.trim().length === 0 || newAge.trim().length === 0) {
+            setError({
+                title: 'Missing credentials',
+                message: 'Username and age are required'
+            })
+            return 
         }
-        if(newAge < 0){
-            const error = 'Age cannot be less then 0'
-            console.log(error)
+        if (+newAge < 1) {
+            setError({
+                title: 'Invalid age',
+                message: 'Age must be greater than 0'
+            })
             return
         }
-        props.onSubmitNewUser ({
+        props.onSubmitNewUser({
             username: newUsername,
             age: newAge,
             id: Math.random()
@@ -54,25 +63,28 @@ const NewUserForm = (props) => {
         SetNewUsername('')
         SetNewAge('')
 
-            
+
     }
 
     return (
-        <Card>
-            <NewUserFormStyled onSubmit={onSubmitHandler}>
-                <div>
+        <>
+            {error && <ErrorModal title={error.title} message={error.message} onCloseModal = {closeModal}/>}
+            <Card>
+                <NewUserFormStyled onSubmit={onSubmitHandler}>
                     <div>
-                        <label htmlFor="username">Username</label>
-                        <input value={newUsername} type="text" id="username" name="username" onChange={onChangeUsernameHandler}></input>
+                        <div>
+                            <label htmlFor="username">Username</label>
+                            <input value={newUsername} type="text" id="username" name="username" onChange={onChangeUsernameHandler}></input>
+                        </div>
+                        <div>
+                            <label htmlFor="age">Age(Years)</label>
+                            <input value={newAge} type="number" id="age" name="age" onChange={onChangeAgeHandler}></input>
+                        </div>
                     </div>
-                    <div>
-                        <label htmlFor="age">Age(Years)</label>
-                        <input value={newAge} type="number" id="age" name="age" onChange={onChangeAgeHandler}></input>
-                    </div>
-                </div>
-                <Button />
-            </NewUserFormStyled>
-        </Card>
+                    <Button type="submit">Add user</Button>
+                </NewUserFormStyled>
+            </Card>
+        </>
     )
 }
 

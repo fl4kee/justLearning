@@ -19,13 +19,9 @@ align-items: space-around;
 function App() {
 
   
-  const [data, setData] = useState([
-    {username: 'kir', age: 26},
-    {username: 'iri', age: 24}
-])
+  const [data, setData] = useState([])
   const onSubmitNewUserHandler =(newUser) => {
     setData((prev) => ([...prev, newUser]))
-    console.log(data)
     
   }
 
